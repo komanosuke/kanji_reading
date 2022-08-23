@@ -1,6 +1,7 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  user_id: 1
   grade1: MyText
   grade2: MyText
   grade3: MyText
@@ -9,6 +10,7 @@ one:
   grade6: MyText
 
 two:
+  user_id: 1
   grade1: MyText
   grade2: MyText
   grade3: MyText

@@ -27,8 +27,14 @@
     <button type="button" id="js-btn">
         <span class="btn-line"></span>
     </button>
-    <div class="btn" id="collection_btn">図鑑</div>
-    <div class="btn" id="login_btn">ログイン</div>
+    <div class="btn" id="collection_btn"><%= link_to '図鑑', controller: 'collections' %></div>
+
+    <% if account_signed_in? %>
+        <div class="btn" id="login_btn"><%=link_to 'ログアウト', destroy_account_session_path, method: :delete %></div>
+    <% else %>
+        <div class="btn" id="login_btn"><%=link_to 'ログイン', {controller: 'hello', action:'login_check'} %></div>
+    <% end %>
+    
 </header>
 
 <div class="back">
@@ -36,24 +42,7 @@
     <div id="title">漢字の読み</div>
     <div class="contents">
         <h1>繰り返し練習して、漢字の読み方を覚えよう！</h1>
-        <p class="dummy_data">
-        １年データ<%= @collections.grade1 %>
-        </p>
-        <p class="dummy_data">
-        ２年データ<%= @collections.grade2 %>
-        </p>
-        <p class="dummy_data">
-        ３年データ<%= @collections.grade3 %>
-        </p>
-        <p class="dummy_data">
-        ４年データ<%= @collections.grade4 %>
-        </p>
-        <p class="dummy_data">
-        ５年データ<%= @collections.grade5 %>
-        </p>
-        <p class="dummy_data">
-        ６年データ<%= @collections.grade6 %>
-        </p>
+        
         <h2 id="grade">小１</h2>
         <div class="kanji_list">
             <button onclick="location.href='#kanji'" class="kanjis" type="button"></button>
@@ -79,7 +68,7 @@
             <button type="button" id="answerButton">答え合わせ</button>
         <hr>
         <div id="congratulations">クリア！おめでとう！！</div>
-        <div class="btn" id="registerButton"><a href="/kanji_quiz">図鑑に登録する</a></div>
+        <div class="btn" id="registerButton"><a href="/kanji_quiz"><%= @register %></a></div>
 
     <%= javascript_pack_tag 'kanji_quiz'%>
     <%= javascript_pack_tag 'toggle'%>

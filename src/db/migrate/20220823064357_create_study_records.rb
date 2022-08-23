@@ -1,6 +1,7 @@
-class CreateCollections < ActiveRecord::Migration[6.1]
+class CreateStudyRecords < ActiveRecord::Migration[6.1]
   def change
-    create_table :collections do |t|
+    create_table :study_records do |t|
+      t.integer :user_id
       t.text :grade1
       t.text :grade2
       t.text :grade3

@@ -1,0 +1,67 @@
+<header>
+    <div id="logo"><a href="/">LIBERAL EARTH</a></div>
+    <div class="link">
+        <ul class="nav">
+            <li class="japanese">
+                <%= link_to '漢字クイズ', controller: 'kanji_quiz' %>
+            </li>
+        </ul>
+</div>
+
+    <button type="button" id="js-btn">
+        <span class="btn-line"></span>
+    </button>
+
+    <% if account_signed_in? %>
+        <div class="btn" id="login_btn"><%=link_to 'ログアウト', destroy_account_session_path, method: :delete %></div>
+    <% else %>
+        <div class="btn" id="login_btn"><%=link_to 'ログイン', {controller: 'hello', action:'login_check'} %></div>
+    <% end %>
+    
+</header>
+
+<div class="back">
+<div id="page_top"><a href="#"></a></div>
+<div id="title">図鑑</div>
+<div class="contents">
+    <h1>たくさん学習して、図鑑をコンプリートしよう！</h1>
+        <p class="dummy_data">
+        user_id<%= @study_record.user_id %>
+        </p>
+        <p class="dummy_data">
+        １年データ<%= @study_record.grade1 %>
+        </p>
+        <p class="dummy_data">
+        ２年データ<%= @study_record.grade2 %>
+        </p>
+        <p class="dummy_data">
+        ３年データ<%= @study_record.grade3 %>
+        </p>
+        <p class="dummy_data">
+        ４年データ<%= @study_record.grade4 %>
+        </p>
+        <p class="dummy_data">
+        ５年データ<%= @study_record.grade5 %>
+        </p>
+        <p class="dummy_data">
+        ６年データ<%= @study_record.grade6 %>
+    </p>
+    
+    <div class="btn"><%= link_to '図鑑データを削除', controller: 'kanji_quiz', action: 'delete' %></div>
+
+    <div class="card_list">
+        <h2 class="grade"></h2>
+        <button class="cards" type="button"></button>
+        <hr>
+    </div>
+    <h2>伝説 ★★★★★★★★★★</h2>
+        <button class="cards" type="button"></button>
+    
+    
+    <%= javascript_pack_tag 'toggle'%>
+    <%= javascript_pack_tag 'collections'%>
+    </div>
+</div>
+<footer>
+    <small>(C) 2022 LIBERAL EARTH (学習サイト) All Rights Reserved.</small>
+</footer>

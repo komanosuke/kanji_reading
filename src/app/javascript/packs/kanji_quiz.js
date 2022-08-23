@@ -5303,7 +5303,7 @@ function postData(){
 			passData: String(passData)
 		},
 	});
-	location.reload()
+	//location.reload()
 }
 
 //図鑑に登録ボタンでpostData()発動

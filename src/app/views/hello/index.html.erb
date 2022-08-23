@@ -1,0 +1,53 @@
+<header>
+    <div id="logo"><a href="/">LIBERAL EARTH</a></div>
+    <div class="link">
+        <ul class="nav">
+            <li class="japanese">
+                <%= link_to '漢字クイズ', controller: 'kanji_quiz' %>
+            </li>
+        </ul>
+    </div>
+
+    <button type="button" id="js-btn">
+        <span class="btn-line"></span>
+    </button>
+    <div class="btn" id="collection_btn"><%= link_to '図鑑', controller: 'collections' %></div>
+
+    <% if account_signed_in? %>
+        <div class="btn" id="login_btn"><%=link_to 'ログアウト', destroy_account_session_path, method: :delete %></div>
+    <% else %>
+        <div class="btn" id="login_btn"><%=link_to 'ログイン', {controller: 'hello', action:'login_check'} %></div>
+    <% end %>
+
+</header>
+
+<div class="back">
+    <div id="page_top"><a href="#"></a></div>
+
+    <% if account_signed_in? then %>
+        <div id="title">やあ！<%= @account.email %>さん</div>
+    <% else %>
+        <div id="title">やあ！</div>
+    <% end %>
+
+    <div class="contents">
+        <h1>いろいろやってみよう！</h1>
+        <h1>Hello#index</h1>
+        <p><%= @message %></p>
+        <p>
+            あなたのアカウント番号は、
+            <% if account_signed_in? then %>
+                <%= current_account.id %>
+            <% end %>
+            です。
+         </p>
+    <hr>
+    
+        
+    
+    <%= javascript_pack_tag 'toggle'%>
+    </div>
+</div>
+<footer>
+    <small>(C) 2022 LIBERAL EARTH (学習サイト) All Rights Reserved.</small>
+</footer>

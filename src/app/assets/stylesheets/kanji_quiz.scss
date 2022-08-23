@@ -404,13 +404,14 @@ button:hover {
 }
 
 
-.kanjis {
+.kanjis, .cards {
     overflow: hidden;
     margin: auto;
     text-align: center;
     height: 50px;
     width: 50px;
 }
+
 
 #kanji {
     font-size: 100px;
