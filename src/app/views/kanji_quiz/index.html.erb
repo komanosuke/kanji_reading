@@ -1,54 +1,87 @@
 <header>
-    <div id="logo"><a href="/">LIBERAL EARTH</a></div>
+    <div id="logo"><div id="logo"><a href="/"><img src="/assets/logo.PNG"></a></div></div>
     <div class="link">
         <ul class="nav">
-            <li class="japanese">
+            <li class="japanese_kanji">
                 <a class="changeGradeButton">１年漢字</a>
             </li>
-            <li class="japanese">
+            <li class="japanese_kanji">
                 <a class="changeGradeButton">２年漢字</a>
             </li>
-            <li class="japanese">
+            <li class="japanese_kanji">
                 <a class="changeGradeButton">３年漢字</a>
             </li>
-            <li class="japanese">
+            <li class="japanese_kanji">
                 <a class="changeGradeButton">４年漢字</a>
             </li>
-            <li class="japanese">
+            <li class="japanese_kanji">
                 <a class="changeGradeButton">５年漢字</a>
             </li>
-            <li class="japanese">
+            <li class="japanese_kanji">
                 <a class="changeGradeButton">６年漢字</a>
             </li>
             
         </ul>
-</div>
+    </div>
+    <div id="login">
+        <button type="button" id="js-btn">
+            <span class="btn-line"></span>
+        </button>
+        <% if account_signed_in? %>
+            <div class="btn" id="collection_btn"><%= link_to '学習記録', controller: 'collections' %></div>
 
-    <button type="button" id="js-btn">
-        <span class="btn-line"></span>
-    </button>
-    <div class="btn" id="collection_btn"><%= link_to '図鑑', controller: 'collections' %></div>
-
-    <% if account_signed_in? %>
-        <div class="btn" id="login_btn"><%=link_to 'ログアウト', destroy_account_session_path, method: :delete %></div>
-    <% else %>
-        <div class="btn" id="login_btn"><%=link_to 'ログイン', {controller: 'hello', action:'login_check'} %></div>
-    <% end %>
+            <div class="btn" id="login_btn"><%=link_to 'ログアウト', destroy_account_session_path, method: :delete %></div>
+        <% else %>
+            <div class="btn" id="login_btn"><%=link_to 'ログイン', {controller: 'hello', action:'login_check'} %></div>
+        <% end %>
+    </div>
     
 </header>
 
 <div class="back">
-    <div id="page_top"><a href="#"></a></div>
-    <div id="title">漢字の読み</div>
+    <div id="page_top"><a></a></div>
+    <div id="title">漢字 読み方クイズ</div>
     <div class="contents">
-        <h1>繰り返し練習して、漢字の読み方を覚えよう！</h1>
+        <h1>いろんな漢字の読み方を覚えよう！</h1>
+        <hr>
+
+        <% if account_signed_in? then %>
+            <p class="dummy_data" value="user_id">
+                <%= @study_record.user_id %>
+            </p>
+            <p class="dummy_data" value="１年データ">
+                <%= @correct_to_js[0] %>
+            </p>
+            <p class="dummy_data" value="２年データ">
+                <%= @correct_to_js[1] %>
+            </p>
+            <p class="dummy_data" value="３年データ">
+                <%= @correct_to_js[2] %>
+            </p>
+            <p class="dummy_data" value="４年データ">
+                <%= @correct_to_js[3] %>
+            </p>
+            <p class="dummy_data" value="５年データ">
+                <%= @correct_to_js[4] %>
+            </p>
+            <p class="dummy_data" value="６年データ">
+                <%= @correct_to_js[5] %>
+            </p>
+        <% end %>
         
-        <h2 id="grade">小１</h2>
+        <p id="grade">小学校1年生の漢字</p>
         <div class="kanji_list">
-            <button onclick="location.href='#kanji'" class="kanjis" type="button"></button>
+            <button class="kanjis" type="button"></button>
         </div>
-        
-        <p id="kanji"></p>
+
+        <div id="hidden_block"></div>
+        <div id="kanji_box"><a id="kanji"></a></div>
+        <p id="on_yomi"></p>
+        <p id="kun_yomi"></p>
+        <hr>
+
+        <div id="advice">↓<ruby>読<rt>よ</rt></ruby>み<ruby>方<rt>かた</rt></ruby>をひらがなで<ruby>入力<rt>にゅうりょく</rt></ruby>しよう↓</div>
+        <hr>
             <div class="quiz_clone">
                 <p class="question"></p>
                 <div class="how_to_read_container">
@@ -60,15 +93,31 @@
                         <p class="question_input_B"></p>
                     </div>
                 </div>
-                <hr>
             </div>
 
 
             <div id="correct_message"></div>
-            <button type="button" id="answerButton">答え合わせ</button>
+            <button type="button" id="answerButton"><ruby>答<rt>こた</rt></ruby>え<ruby>合<rt>あ</rt></ruby>わせ</button>
         <hr>
         <div id="congratulations">クリア！おめでとう！！</div>
-        <div class="btn" id="registerButton"><a href="/kanji_quiz"><%= @register %></a></div>
+        <% if account_signed_in? %>
+            <div class="btn" id="registerButton"><a href="/kanji_quiz">カードを<ruby>学習記録<rt>がくしゅうきろく</rt></ruby>に<ruby>保存<rt>ほぞん</rt></ruby>する</a></div>
+        <% end %>
+    
+    <div class="popup" id="js-popup">
+        <div class="popup-inner">
+            <div class="close-btn" id="js-close-btn"><i class="fas fa-times"></i></div>
+            <img id="image_file" src="" alt="ポップアップ画像">
+        </div>
+        <div class="black-background" id="js-black-bg"></div>
+    </div>
+    <p id="pass_message">がんばったね！</p>
+    
+    <% if account_signed_in? %>
+        <div id="login_checker">true</div>
+    <% else %>
+        <div id="login_checker">false</div>
+    <% end %>
 
     <%= javascript_pack_tag 'kanji_quiz'%>
     <%= javascript_pack_tag 'toggle'%>

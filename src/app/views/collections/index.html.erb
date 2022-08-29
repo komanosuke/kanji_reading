@@ -1,61 +1,89 @@
 <header>
-    <div id="logo"><a href="/">LIBERAL EARTH</a></div>
+    <div id="logo"><div id="logo"><a href="/"><img src="/assets/logo.PNG"></a></div></div>
     <div class="link">
         <ul class="nav">
             <li class="japanese">
-                <%= link_to '漢字クイズ', controller: 'kanji_quiz' %>
+                <%= link_to '国語', {controller: 'hello', action:'japanese'} %>
+            </li>
+            <li class="math">
+                <%= link_to '算数', {controller: 'hello', action:'math'} %>
+            </li>
+            <li class="social">
+                <%= link_to '社会', {controller: 'hello', action:'social'} %>
+            </li>
+            <li class="science">
+                <%= link_to '理科', {controller: 'hello', action:'science'} %>
+            </li>
+            <li class="english">
+                <%= link_to '英語', {controller: 'hello', action:'english'} %>
             </li>
         </ul>
-</div>
+    </div>
 
-    <button type="button" id="js-btn">
-        <span class="btn-line"></span>
-    </button>
-
-    <% if account_signed_in? %>
-        <div class="btn" id="login_btn"><%=link_to 'ログアウト', destroy_account_session_path, method: :delete %></div>
-    <% else %>
-        <div class="btn" id="login_btn"><%=link_to 'ログイン', {controller: 'hello', action:'login_check'} %></div>
-    <% end %>
+    <div id="login">
+        <button type="button" id="js-btn">
+            <span class="btn-line"></span>
+        </button>
+        <% if account_signed_in? %>
+            <div class="btn" id="login_btn"><%=link_to 'ログアウト', destroy_account_session_path, method: :delete %></div>
+        <% else %>
+            <div class="btn" id="login_btn"><%=link_to 'ログイン', {controller: 'hello', action:'login_check'} %></div>
+        <% end %>
+    </div>
     
 </header>
 
 <div class="back">
-<div id="page_top"><a href="#"></a></div>
-<div id="title">図鑑</div>
+<div id="page_top"><a></a></div>
+<div id="title"><ruby>学習記録<rt>がくしゅうきろく</rt></ruby></div>
 <div class="contents">
-    <h1>たくさん学習して、図鑑をコンプリートしよう！</h1>
-        <p class="dummy_data">
-        user_id<%= @study_record.user_id %>
+    <h1>↓　がんばった<ruby>記録<rt>きろく</rt></ruby>はここにのこる！　↓</h1>
+        <p class="dummy_data" value="user_id">
+            <%= @study_record.user_id %>
         </p>
-        <p class="dummy_data">
-        １年データ<%= @study_record.grade1 %>
+        <p class="dummy_data" value="１年データ">
+            <%= @correct_to_js[0] %>
         </p>
-        <p class="dummy_data">
-        ２年データ<%= @study_record.grade2 %>
+        <p class="dummy_data" value="２年データ">
+            <%= @correct_to_js[1] %>
         </p>
-        <p class="dummy_data">
-        ３年データ<%= @study_record.grade3 %>
+        <p class="dummy_data" value="３年データ">
+            <%= @correct_to_js[2] %>
         </p>
-        <p class="dummy_data">
-        ４年データ<%= @study_record.grade4 %>
+        <p class="dummy_data" value="４年データ">
+            <%= @correct_to_js[3] %>
         </p>
-        <p class="dummy_data">
-        ５年データ<%= @study_record.grade5 %>
+        <p class="dummy_data" value="５年データ">
+            <%= @correct_to_js[4] %>
         </p>
-        <p class="dummy_data">
-        ６年データ<%= @study_record.grade6 %>
-    </p>
+        <p class="dummy_data" value="６年データ">
+            <%= @correct_to_js[5] %>
+        </p>
     
-    <div class="btn"><%= link_to '図鑑データを削除', controller: 'kanji_quiz', action: 'delete' %></div>
+    <img id="welcome" src="/assets/introduction.PNG">
 
-    <div class="card_list">
+
+    <div class="container_to_clone">
         <h2 class="grade"></h2>
-        <button class="cards" type="button"></button>
+        <div class="card_list">
+            <button class="cards" type="button"></button>
+        </div>
         <hr>
     </div>
-    <h2>伝説 ★★★★★★★★★★</h2>
-        <button class="cards" type="button"></button>
+    
+    <hr>
+    <div class="btn" id="delete_collections"><%= link_to '学習記録を削除', controller: 'kanji_quiz', action: 'delete' %></div>
+
+
+    <div class="popup" id="js-popup">
+        <div class="popup-inner">
+          <div class="close-btn" id="js-close-btn"><i class="fas fa-times"></i></div>
+          <img id="image_file" src="" alt="ポップアップ画像">
+        </div>
+        <div class="black-background" id="js-black-bg"></div>
+    </div>
+    
+        
     
     
     <%= javascript_pack_tag 'toggle'%>
