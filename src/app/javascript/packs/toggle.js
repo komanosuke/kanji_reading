@@ -16,3 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
         $changeGradeButton[i].addEventListener("click", () => { toggleBurger() });
     }
 });
+
+let pageTop = document.getElementById('page_top');
+pageTop.addEventListener('click', function() {
+	$('html, body').animate({scrollTop:0},400);
+});

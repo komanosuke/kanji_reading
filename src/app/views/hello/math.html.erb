@@ -1,0 +1,51 @@
+<header>
+    <div id="logo"><div id="logo"><a href="/"><img src="/assets/logo.PNG"></a></div></div>
+    <div class="link">
+        <ul class="nav">
+            <li class="japanese">
+                <%= link_to '国語', {controller: 'hello', action:'japanese'} %>
+            </li>
+            <li class="math">
+                <%= link_to '算数', {controller: 'hello', action:'math'} %>
+            </li>
+            <li class="social">
+                <%= link_to '社会', {controller: 'hello', action:'social'} %>
+            </li>
+            <li class="science">
+                <%= link_to '理科', {controller: 'hello', action:'science'} %>
+            </li>
+            <li class="english">
+                <%= link_to '英語', {controller: 'hello', action:'english'} %>
+            </li>
+        </ul>
+    </div>
+
+    <div id="login">
+        <button type="button" id="js-btn">
+            <span class="btn-line"></span>
+        </button>
+        <% if account_signed_in? %>
+            <div class="btn" id="collection_btn"><%= link_to '学習記録', controller: 'collections' %></div>
+
+            <div class="btn" id="login_btn"><%=link_to 'ログアウト', destroy_account_session_path, method: :delete %></div>
+        <% else %>
+            <div class="btn" id="login_btn"><%=link_to 'ログイン', {controller: 'hello', action:'login_check'} %></div>
+        <% end %>
+    </div>
+
+</header>
+
+<div class="back">
+    <div id="page_top"><a></a></div>
+
+    <div class="contents">
+    <p>コンテンツはまだありません。</p>
+    <img class="not_yet" src="/assets/math_coming.PNG">
+        
+    
+    <%= javascript_pack_tag 'toggle'%>
+    </div>
+</div>
+<footer>
+    <small>(C) 2022 LIBERAL EARTH (学習サイト) All Rights Reserved.</small>
+</footer>

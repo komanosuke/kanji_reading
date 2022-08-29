@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  
   devise_for :accounts
   get 'hello/login_check'
   
@@ -7,6 +6,16 @@ Rails.application.routes.draw do
 
   get 'hello/index'
   get 'hello', to: 'hello#index'
+
+  get 'hello/japanese'
+
+  get 'hello/math'
+
+  get 'hello/social'
+
+  get 'hello/science'
+
+  get 'hello/english'
 
   get 'kanji_quiz/index'
   get 'kanji_quiz', to: 'kanji_quiz#index'
@@ -20,11 +29,10 @@ Rails.application.routes.draw do
   get 'collections/index'
   get 'collections', to: 'collections#index'
 
-  
 
   
-  #devise_scope :account do
-    #get '/accounts/sign_out' => 'devise/sessions#destroy'
-  #end
+  devise_scope :account do
+    get '/accounts/sign_out' => 'devise/sessions#destroy'
+  end
 
 end
