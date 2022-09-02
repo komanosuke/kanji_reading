@@ -6477,7 +6477,7 @@ if(login_checker.textContent == 'true'){
 //合格時のアニメーション
 function openPopup(grade, num){
 	let img = document.getElementById('image_file');
-	let imgName = '/assets/image' + grade + '_' + num + '.PNG';
+	let imgName = '/assets/image' + grade + '_' + num + '.jpg';
 	img.src = imgName;
 	document.querySelector('#image_file').animate(
 		[

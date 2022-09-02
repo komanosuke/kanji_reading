@@ -44,7 +44,7 @@ for(let i = 0; i < 6; i++){
 
 function openPopup(num){
 	let img = document.getElementById('image_file');
-	let imgName = '/assets/image' + this.num + '.PNG';
+	let imgName = '/assets/image' + this.num + '.jpg';
 	img.src = imgName;
 
 	let popup = document.getElementById('js-popup');

@@ -1,5 +1,5 @@
 <header>
-    <div id="logo"><div id="logo"><a href="/"><img src="/assets/logo.PNG"></a></div></div>
+    <div id="logo"><div id="logo"><a href="/"><%= image_tag "logo.jpg" %></a></div></div>
     <div class="link">
         <ul class="nav">
             <li class="japanese">
@@ -40,7 +40,7 @@
 
     <div class="contents">
     <p>コンテンツはまだありません。</p>
-    <img class="not_yet" src="/assets/science_coming.PNG">
+    <%= image_tag "science_coming.jpg", class: "not_yet" %>
         
     
     <%= javascript_pack_tag 'toggle'%>
