@@ -1,5 +1,5 @@
 <header>
-    <div id="logo"><div id="logo"><a href="/"><img src="/assets/logo.PNG"></a></div></div>
+    <div id="logo"><div id="logo"><a href="/"><%= image_tag "logo.jpg" %></a></div></div>
     <div class="link">
         <ul class="nav">
             <li class="japanese">
@@ -39,7 +39,7 @@
     <div id="page_top"><a></a></div>
 
     <div class="contents">
-        <img class="not_yet" src="/assets/japanese_coming.PNG">
+        <%= image_tag "japanese_coming.jpg", class: "not_yet" %>
         <div class="japanese" id="contents_link">
             <%= link_to '漢字マスターになる！', {controller: 'kanji_quiz'} %>
         </div>

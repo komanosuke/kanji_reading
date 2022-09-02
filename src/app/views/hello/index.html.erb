@@ -1,5 +1,5 @@
 <header>
-    <div id="logo"><a href="/"><img src="/assets/logo.PNG"></a></div>
+    <div id="logo"><a href="/"><%= image_tag "logo.jpg" %></a></div>
     <div class="link">
         <ul class="nav">
             <li class="japanese">
@@ -41,7 +41,7 @@
     <div class="contents">
         <div id="title">やあ！</div>
         <h1><ruby>学<rt>まな</rt></ruby>びの<ruby>星<rt>ほし</rt></ruby>「<ruby>LIBERAL EARTH<rt>リベラルアース</rt></ruby>」へようこそ！</h1>
-        <img id="welcome" src="/assets/welcome.PNG">
+        <%= image_tag "welcome.jpg", id: "welcome" %>
     
     <% if account_signed_in? then %>
         <p>「<%= @account.email %>」でログインしてるよ！</p>
