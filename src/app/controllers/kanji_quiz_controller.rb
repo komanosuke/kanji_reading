@@ -21,6 +21,7 @@ class KanjiQuizController < ApplicationController
         end
     end
 
+    
 
     def update
         if account_signed_in?
@@ -60,9 +61,8 @@ class KanjiQuizController < ApplicationController
                     study_record.update(grade6: updated)
                 end
                 study_record.save
-                redirect_to '/kanji_quiz'
             else
-                redirect_to '/kanji_quiz'
+                redirect_to action: :index
             end
             
         end

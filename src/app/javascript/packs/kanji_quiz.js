@@ -10,15 +10,15 @@ const kanjiList = [
 const quiz1 = [
 	{
 		pronunciation:[['イチ','イツ'],['ひと','ひとつ']],
-		question:['一円','一字','一年','一生','一足','一本','一日','一口','一人'],
-		kanji:['一円','一字','一年','一生','一足','一本','一日','一口','一人'],
-		answer:['いちえん','いちじ','いちねん','いっしょう','いっそく','いっぽん','ついたち','ひとくち','ひとり']
+		question:['一円','一字','一年','一人'],
+		kanji:['一円','一字','一年','一人'],
+		answer:['いちえん','いちじ','いちねん','ひとり']
 	},
 	{
 		pronunciation:[['ウ','ユウ'],['みぎ']],
-		question:['左右','右足','右上','右下','右手','右目'],
-		kanji:['左右','右足','右上','右下','右手','右目'],
-		answer:['さゆう','みぎあし','みぎうえ','みぎした','みぎて','みぎめ']
+		question:['左右','右足'],
+		kanji:['左右','右足'],
+		answer:['さゆう','みぎあし']
 	},
 	{
 		pronunciation:[['ウ'],['あめ','あま']],
@@ -34,9 +34,9 @@ const quiz1 = [
 	},
 	{
 		pronunciation:[['オウ'],['']],
-		question:['王子','王手','女王','女王'],
-		kanji:['王子','王手','女王','女王'],
-		answer:['おうじ','おうて','じょうおう','じょおう']
+		question:['王子','王手','女王'],
+		kanji:['王子','王手','女王'],
+		answer:['おうじ','おうて','じょおう']
 	},
 	{
 		pronunciation:[['オン','イン'],['おと','ね']],
@@ -100,9 +100,9 @@ const quiz1 = [
 	},
 	{
 		pronunciation:[['キン','コン'],['かね','かな']],
-		question:[''],
-		kanji:[''],
-		answer:['']
+		question:['金曜','引金','金沢','黄金'],
+		kanji:['金曜','引金','金沢','黄金'],
+		answer:['きんよう','ひきがね','かなざわ','おうごん']
 	},
 	{
 		pronunciation:[['クウ'],['そら','あく','あける','から']],
@@ -190,9 +190,9 @@ const quiz1 = [
 	},
 	{
 		pronunciation:[['ジ'],['みみ']],
-		question:[''],
-		kanji:[''],
-		answer:['']
+		question:['右耳','耳鼻科'],
+		kanji:['右耳','耳鼻科'],
+		answer:['みぎみみ','じびか']
 	},
 	{
 		pronunciation:[['シチ'],['なな','ななつ','なの']],
@@ -298,9 +298,9 @@ const quiz1 = [
 	},
 	{
 		pronunciation:[['セン'],['ち']],
-		question:[''],
-		kanji:[''],
-		answer:['']
+		question:['千円','千代紙'],
+		kanji:['千円','千代紙'],
+		answer:['せんえん','ちよがみ']
 	},
 	{
 		pronunciation:[['セン'],['かわ']],
@@ -430,9 +430,9 @@ const quiz1 = [
 	},
 	{
 		pronunciation:[['ヒャク'],['']],
-		question:[''],
-		kanji:[''],
-		answer:['']
+		question:['百円'],
+		kanji:['百円'],
+		answer:['ひゃくえん']
 	},
 	{
 		pronunciation:[['ブン','モン'],['ふみ']],
@@ -6181,7 +6181,16 @@ const quiz6 = [
 		answer:['いろん','かくろん','きょくろん','ぎろん','くうろん','けつろん','げきろん','げんろん','げんろん','こうろん','こうろん','こくろん','しゅうろん','しろん','しろん','じょろん','じろん','すいろん','せいろん','せろん','そうろん','そつろん','とうろん','はくろん','はんろん','ひょうろん','べんろん','ぼうろん','むろん','もくろ','よろん','りつろん','りょうろん','りろん','ろんがい','ろんきゅう','ろんぎ','ろんこう','ろんこく','ろんご','ろんしゃ','ろんしょう','ろんじゃ','ろんじゅつ','ろんせつ','ろんそう','ろんだい','ろんちょう','ろんてき','ろんてん','ろんなん','ろんぴょう','ろんぶん','ろんぽう','ろんり']
 	}
 ];
+window.onload = function () {
 
+    if (window.name != "any") {
+        location.reload();
+        window.name = "any";
+    } else {
+        window.name = "";
+    }
+
+}
 
 let quiz = quiz1;
 let kanjiGrade = 0;
@@ -6246,14 +6255,17 @@ document.getElementById('kun_yomi').textContent = '訓読み： ' + quiz[kanjiNu
 function judge() {
 	let score = 0;
 	let quizLength = quiz[kanjiNumber].question.length;
+
+	let answerToShow = document.getElementsByClassName('answer');
+
 	for(let i = 0; i < quizLength; i++){
 		let $answer = document.getElementsByClassName('how_to_read')[i].value;
-
+		answerToShow[i].textContent = quiz[kanjiNumber].answer[i];
 		if ($answer == quiz[kanjiNumber].answer[i]){
 			score++;
-
 		}
 	}
+	setTimeout(removeAnswer,3000);
 
 	if (score == quizLength){
 		document.getElementById('correct_message').textContent = '全問正解です！！（' + score + '点/' + quizLength + '点中）';
@@ -6271,6 +6283,16 @@ function judge() {
 		document.getElementById('correct_message').textContent = '残念！もう一度やってみよう！！';
 	}
 
+}
+
+
+//答えを消す
+function removeAnswer(){
+	let quizLength = quiz[kanjiNumber].question.length;
+	let answerToShow = document.getElementsByClassName('answer');
+	for(let i = 0; i < quizLength; i++){
+		answerToShow[i].textContent = '';
+	}
 }
 
 
@@ -6336,6 +6358,7 @@ function setKanji(kanjiGrade){
 
 //前回のクイズ削除
 function removeQuiz(){
+	removeAnswer();
 	let cloneRemoveCounter = quiz[kanjiNumber].question.length-1;
 		while(cloneRemoveCounter > 0 ){
 			let quizCloneToRemove = document.getElementsByClassName('quiz_clone');
@@ -6477,7 +6500,13 @@ if(login_checker.textContent == 'true'){
 //合格時のアニメーション
 function openPopup(grade, num){
 	let img = document.getElementById('image_file');
-	let imgName = '/assets/image' + grade + '_' + num + '.jpg';
+	let imgName = '/image' + grade + '_' + num + '.jpg';
+	if(num > 8){
+		imgName = '/dummy.jpg';
+	}
+	if(grade > 0){
+		imgName = '/dummy.jpg';
+	}
 	img.src = imgName;
 	document.querySelector('#image_file').animate(
 		[
@@ -6508,13 +6537,18 @@ function closePopUp() {
 	let popup = document.getElementById('js-popup');
 	let blackBg = document.getElementById('js-black-bg');
 	let closeBtn = document.getElementById('js-close-btn');
+	let img = document.getElementById('image_file');
 	blackBg.addEventListener('click', function() {
 		popup.classList.remove('is-show');
+		let passMessage = document.getElementById('pass_message');
+		passMessage.style.visibility = 'hidden';
+		img.src = '/white.jpg';
 	});
 	closeBtn.addEventListener('click', function() {
 		popup.classList.remove('is-show');
 		let passMessage = document.getElementById('pass_message');
 		passMessage.style.visibility = 'hidden';
+		img.src = '/white.jpg';
 	});
 }
 closePopUp();
