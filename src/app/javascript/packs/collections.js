@@ -44,7 +44,23 @@ for(let i = 0; i < 6; i++){
 
 function openPopup(num){
 	let img = document.getElementById('image_file');
-	let imgName = '/assets/image' + this.num + '.jpg';
+	let grade = 0;
+	if(80 <= this.num && this.num < 240){
+		grade = 1;
+	} else if (240 <= this.num && this.num < 440){
+		grade = 2;
+	}  else if (440 <= this.num && this.num < 642){
+		grade = 3;
+	}  else if (642 <= this.num && this.num < 835){
+		grade = 4;
+	}  else if (835 <= this.num && this.num < 1026){
+		grade = 5;
+	}
+
+	let imgName = '/image' + grade + '_' + this.num + '.jpg';
+	if(this.num > 8){
+		imgName = '/dummy.jpg';
+	}
 	img.src = imgName;
 
 	let popup = document.getElementById('js-popup');
@@ -55,11 +71,14 @@ function closePopUp() {
 	let popup = document.getElementById('js-popup');
 	let blackBg = document.getElementById('js-black-bg');
 	let closeBtn = document.getElementById('js-close-btn');
+	let img = document.getElementById('image_file');
 	blackBg.addEventListener('click', function() {
 		popup.classList.remove('is-show');
+		img.src = '/white.jpg';
 	});
 	closeBtn.addEventListener('click', function() {
 		popup.classList.remove('is-show');
+		img.src = '/white.jpg';
 	});
 	
 }
@@ -177,7 +196,7 @@ for(let i = 0; i < correctList.length; i++){
 
 
 			//要修正！カードのデータ1026個集まったら
-			if(num < 80){
+			if(num < 1026){
 				$cardList[num].addEventListener('click', {num: num, handleEvent: openPopup}, false);
 			}
 		}			

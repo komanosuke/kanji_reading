@@ -21,10 +21,10 @@ Rails.application.routes.draw do
   get 'kanji_quiz', to: 'kanji_quiz#index'
 
   get 'kanji_quiz/update'
-  get 'kanji_quiz/update' , to: 'kanji_quiz#kanji_quiz'
+  get 'kanji_quiz/update' , to: 'kanji_quiz#index'
 
   get 'kanji_quiz/delete'
-  get 'kanji_quiz/delete' , to: 'kanji_quiz#kanji_quiz'
+  get 'kanji_quiz/delete' , to: 'kanji_quiz#index'
 
   get 'collections/index'
   get 'collections', to: 'collections#index'
