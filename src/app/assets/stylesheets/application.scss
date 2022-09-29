@@ -1666,6 +1666,10 @@ table {
         width: 25px;
         height: 25px;
     }
+
+    .numbers, .calc_texts {
+        font-size: 16px;
+    }
     
     //計算
     #calc_column0, #calc_row0, #area, #takasa, #teihen, #area2 {

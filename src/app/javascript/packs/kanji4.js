@@ -31,9 +31,9 @@ const quiz = [
 	},
 	{
 		pronunciation:[[''],['いばら']],
-		question:[''],
-		kanji:[''],
-		answer:['']
+		question:['茨城'],
+		kanji:['茨城'],
+		answer:['いばらき']
 	},
 	{
 		pronunciation:[['イン'],['しるし']],
@@ -55,9 +55,9 @@ const quiz = [
 	},
 	{
 		pronunciation:[['エン'],['ひめ']],
-		question:[''],
-		kanji:[''],
-		answer:['']
+		question:['愛媛'],
+		kanji:['愛媛'],
+		answer:['えひめ']
 	},
 	{
 		pronunciation:[['エン'],['しお']],
@@ -67,15 +67,15 @@ const quiz = [
 	},
 	{
 		pronunciation:[[''],['おか']],
-		question:[''],
-		kanji:[''],
-		answer:['']
+		question:['岡山'],
+		kanji:['岡山'],
+		answer:['おかやま']
 	},
 	{
 		pronunciation:[['オク'],['']],
-		question:[''],
-		kanji:[''],
-		answer:['']
+		question:['一億'],
+		kanji:['一億'],
+		answer:['いちおく']
 	},
 	{
 		pronunciation:[['カ'],['くわえる','くわわる']],
@@ -151,9 +151,9 @@ const quiz = [
 	},
 	{
 		pronunciation:[[''],['かた']],
-		question:[''],
-		kanji:[''],
-		answer:['']
+		question:['新潟'],
+		kanji:['新潟'],
+		answer:['にいがた']
 	},
 	{
 		pronunciation:[['カン'],['']],
@@ -193,9 +193,9 @@ const quiz = [
 	},
 	{
 		pronunciation:[['キ','ギ'],['']],
-		question:[''],
-		kanji:[''],
-		answer:['']
+		question:['岐阜'],
+		kanji:['岐阜'],
+		answer:['ぎふ']
 	},
 	{
 		pronunciation:[['キ'],['']],
@@ -295,9 +295,9 @@ const quiz = [
 	},
 	{
 		pronunciation:[[''],['くま']],
-		question:[''],
-		kanji:[''],
-		answer:['']
+		question:['熊本'],
+		kanji:['熊本'],
+		answer:['くまもと']
 	},
 	{
 		pronunciation:[['クン'],['']],
@@ -391,9 +391,9 @@ const quiz = [
 	},
 	{
 		pronunciation:[['コウ','キョウ'],['か','かおり','かおる']],
-		question:[''],
-		kanji:[''],
-		answer:['']
+		question:['香水','香川'],
+		kanji:['香水','香川'],
+		answer:['こうすい','かがわ']
 	},
 	{
 		pronunciation:[['コウ'],['そうろう']],
@@ -409,9 +409,9 @@ const quiz = [
 	},
 	{
 		pronunciation:[['サ'],['']],
-		question:[''],
-		kanji:[''],
-		answer:['']
+		question:['佐賀'],
+		kanji:['佐賀'],
+		answer:['さが']
 	},
 	{
 		pronunciation:[['サ'],['さす']],
@@ -433,9 +433,9 @@ const quiz = [
 	},
 	{
 		pronunciation:[[''],['さい']],
-		question:[''],
-		kanji:[''],
-		answer:['']
+		question:['埼玉'],
+		kanji:['埼玉'],
+		answer:['さいたま']
 	},
 	{
 		pronunciation:[['ザイ'],['']],
@@ -445,9 +445,9 @@ const quiz = [
 	},
 	{
 		pronunciation:[[''],['さき']],
-		question:[''],
-		kanji:[''],
-		answer:['']
+		question:['長崎'],
+		kanji:['長崎'],
+		answer:['ながさき']
 	},
 	{
 		pronunciation:[['サク'],['']],
@@ -529,9 +529,9 @@ const quiz = [
 	},
 	{
 		pronunciation:[['ジ','シ'],['']],
-		question:[''],
-		kanji:[''],
-		answer:['']
+		question:['滋賀'],
+		kanji:['滋賀'],
+		answer:['しが']
 	},
 	{
 		pronunciation:[['ジ'],['やめる']],
@@ -541,9 +541,9 @@ const quiz = [
 	},
 	{
 		pronunciation:[[''],['しか','か']],
-		question:[''],
-		kanji:[''],
-		answer:['']
+		question:['鹿児島'],
+		kanji:['鹿児島'],
+		answer:['かごしま']
 	},
 	{
 		pronunciation:[['シツ'],['うしなう','うせる']],
@@ -625,9 +625,9 @@ const quiz = [
 	},
 	{
 		pronunciation:[['ジョウ'],['なわ']],
-		question:[''],
-		kanji:[''],
-		answer:['']
+		question:['沖縄'],
+		kanji:['沖縄'],
+		answer:['おきなわ']
 	},
 	{
 		pronunciation:[['シン','ジン'],['']],
@@ -643,9 +643,9 @@ const quiz = [
 	},
 	{
 		pronunciation:[['セイ','ショウ'],['い']],
-		question:[''],
-		kanji:[''],
-		answer:['']
+		question:['福井'],
+		kanji:['福井'],
+		answer:['ふくい']
 	},
 	{
 		pronunciation:[['セイ','ジョウ'],['なる','なす']],
@@ -811,9 +811,9 @@ const quiz = [
 	},
 	{
 		pronunciation:[['チュウ'],['おき']],
-		question:[''],
-		kanji:[''],
-		answer:['']
+		question:['沖縄'],
+		kanji:['沖縄'],
+		answer:['おきなわ']
 	},
 	{
 		pronunciation:[['チョウ'],['きざす','きざし']],
@@ -889,9 +889,9 @@ const quiz = [
 	},
 	{
 		pronunciation:[[''],['とち']],
-		question:[''],
-		kanji:[''],
-		answer:['']
+		question:['栃木'],
+		kanji:['栃木'],
+		answer:['とちぎ']
 	},
 	{
 		pronunciation:[['ナ'],['']],
@@ -901,9 +901,9 @@ const quiz = [
 	},
 	{
 		pronunciation:[[''],['なし']],
-		question:[''],
-		kanji:[''],
-		answer:['']
+		question:['山梨'],
+		kanji:['山梨'],
+		answer:['やまなし']
 	},
 	{
 		pronunciation:[['ネツ'],['あつい']],
@@ -937,9 +937,9 @@ const quiz = [
 	},
 	{
 		pronunciation:[['ハン'],['さか']],
-		question:[''],
-		kanji:[''],
-		answer:['']
+		question:['大阪'],
+		kanji:['大阪'],
+		answer:['おおさか']
 	},
 	{
 		pronunciation:[['ハン'],['めし']],
@@ -997,9 +997,9 @@ const quiz = [
 	},
 	{
 		pronunciation:[['フ'],['']],
-		question:[''],
-		kanji:[''],
-		answer:['']
+		question:['岐阜'],
+		kanji:['岐阜'],
+		answer:['ぎふ']
 	},
 	{
 		pronunciation:[['フ','フウ'],['とむ','とみ']],
