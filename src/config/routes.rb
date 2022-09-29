@@ -20,6 +20,12 @@ Rails.application.routes.draw do
   get 'kanji_quiz/index'
   get 'kanji_quiz', to: 'kanji_quiz#index'
 
+  get 'kanji_quiz/index2'
+  get 'kanji_quiz/index3'
+  get 'kanji_quiz/index4'
+  get 'kanji_quiz/index5'
+  get 'kanji_quiz/index6'
+
   get 'kanji_quiz/update'
   get 'kanji_quiz/update' , to: 'kanji_quiz#index'
 

@@ -2,8 +2,7 @@ class KanjiQuizController < ApplicationController
 
     @@kanji_pass_list = ['00000000000000000000000000000000000000000000000000000000000000000000000000000000','0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000','00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000','0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000','0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000','00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000']
 
-    
-    def index
+    def check_correct_data
         if account_signed_in?
             @study_record = StudyRecord.find_by(user_id: current_account.id)
 
@@ -20,12 +19,34 @@ class KanjiQuizController < ApplicationController
             end
         end
     end
-
     
+    def index
+        check_correct_data()
+    end
+
+    def index2
+        check_correct_data()
+    end
+
+    def index3
+        check_correct_data()
+    end
+
+    def index4
+        check_correct_data()
+    end
+
+    def index5
+        check_correct_data()
+    end
+
+    def index6
+        check_correct_data()
+    end
 
     def update
         if account_signed_in?
-            if request.get? then
+            if request.get? 
                 study_record = StudyRecord.find_by(user_id: current_account.id)
 
                 #javascriptから問題の正解情報を取得
@@ -35,34 +56,31 @@ class KanjiQuizController < ApplicationController
                 logger.debug grade
                 logger.debug pass_data
 
-                if grade == 0 then
+                if grade == 0 
                     updated = study_record.grade1
                     updated[pass_data] = '1'
                     study_record.update(grade1: updated)
-                elsif grade == 1 then
+                elsif grade == 1 
                     updated = study_record.grade2
                     updated[pass_data] = '1'
                     study_record.update(grade2: updated)
-                elsif grade == 2 then
+                elsif grade == 2 
                     updated = study_record.grade3
                     updated[pass_data] = '1'
                     study_record.update(grade3: updated)
-                elsif grade == 3 then
+                elsif grade == 3 
                     updated = study_record.grade4
                     updated[pass_data] = '1'
                     study_record.update(grade4: updated)
-                elsif grade == 4 then
+                elsif grade == 4 
                     updated = study_record.grade5
                     updated[pass_data] = '1'
                     study_record.update(grade5: updated)
-                elsif grade == 5 then
+                elsif grade == 5 
                     updated = study_record.grade6
                     updated[pass_data] = '1'
                     study_record.update(grade6: updated)
                 end
-                study_record.save
-            else
-                redirect_to action: :index
             end
             
         end
@@ -70,7 +88,7 @@ class KanjiQuizController < ApplicationController
 
     def delete
         decide = params[:confirmDelete]
-        if decide == 'true' then
+        if decide == 'true' 
             study_record = StudyRecord.find_by(user_id: current_account.id)
             study_record.update(grade1:@@kanji_pass_list[0],grade2:@@kanji_pass_list[1],grade3:@@kanji_pass_list[2],grade4:@@kanji_pass_list[3],grade5:@@kanji_pass_list[4],grade6:@@kanji_pass_list[5])
         end
