@@ -1,24 +1,25 @@
-# README
+# LIBERAL EARTH
+ 学習に抵抗感のある児童向けの基礎学習のサイトです。<br>
+ 国語では「漢字の読み」ドリルを、算数では「百ます計算」などを練習できます。<br>
+ レスポンシブ対応しているのでスマホからもご確認いただけます。
+ <img width="1400" alt="スクリーンショット 2020-05-07 0 06 18" src="https://user-images.githubusercontent.com/60876388/81193748-c51d9b00-8ff6-11ea-9981-46789f016300.png">
+ <img width="350" height="700" src= "https://user-images.githubusercontent.com/60876388/81476543-643bd000-924d-11ea-9d26-cac305ca9f91.jpeg">
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# URL
+http://the-view.work/ <br>
 
-Things you may want to cover:
+# 使用技術
+- Ruby 2.7
+- Ruby on Rails 5.2.4
+- MySQL 5.5
+- Puma
+- HEROKU
+- Docker/Docker-compose
+- CircleCi CI/CD
 
-* Ruby version
+## CircleCi CI/CD
+- Githubへのmainブランチへのmerge時にエラーがなかった場合、HEROKUへの自動デプロイが実行されます。
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# 機能一覧
+- ユーザー登録、ログイン機能(devise)
+- 学習記録保存機能(Ajax)
