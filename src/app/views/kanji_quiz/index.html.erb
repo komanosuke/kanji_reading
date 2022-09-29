@@ -3,22 +3,22 @@
     <div class="link">
         <ul class="nav">
             <li class="japanese_kanji">
-                <a class="changeGradeButton">１年漢字</a>
+                <%= link_to '１年漢字', {controller: 'kanji_quiz', action:'index'}, class: 'changeGradeButton' %>
             </li>
             <li class="japanese_kanji">
-                <a class="changeGradeButton">２年漢字</a>
+                <%= link_to '２年漢字', {controller: 'kanji_quiz', action:'index2'}, class: 'changeGradeButton' %>
             </li>
             <li class="japanese_kanji">
-                <a class="changeGradeButton">３年漢字</a>
+                <%= link_to '３年漢字', {controller: 'kanji_quiz', action:'index3'}, class: 'changeGradeButton' %>
             </li>
             <li class="japanese_kanji">
-                <a class="changeGradeButton">４年漢字</a>
+                <%= link_to '４年漢字', {controller: 'kanji_quiz', action:'index4'}, class: 'changeGradeButton' %>
             </li>
             <li class="japanese_kanji">
-                <a class="changeGradeButton">５年漢字</a>
+                <%= link_to '５年漢字', {controller: 'kanji_quiz', action:'index5'}, class: 'changeGradeButton' %>
             </li>
             <li class="japanese_kanji">
-                <a class="changeGradeButton">６年漢字</a>
+                <%= link_to '６年漢字', {controller: 'kanji_quiz', action:'index6'}, class: 'changeGradeButton' %>
             </li>
             
         </ul>
@@ -42,7 +42,12 @@
     <div id="page_top"><a></a></div>
     <div id="title">漢字 読み方クイズ</div>
     <div class="contents">
-        <h1>いろんな漢字の読み方を覚えよう！</h1>
+        <h1>いろんな<ruby>漢字<rt>かんじ</rt></ruby>の<ruby>読<rt>よ</rt></ruby>み<ruby>方<rt>かた</rt></ruby>をおぼえよう！</h1>
+        <% if account_signed_in? %>
+            <p><ruby>合格<rt>ごうかく</rt></ruby>したらキャラクターカードがでてくるよ！<br>がんばってあつめよう！</p>
+        <% else %>
+            <p>ログインすると、<ruby>合格<rt>ごうかく</rt></ruby>したときに<br>キャラクターカードがゲットできるよ！</p>
+        <% end %>
         <hr>
 
         <% if account_signed_in? then %>
@@ -69,7 +74,7 @@
             </p>
         <% end %>
         
-        <p id="grade">小学校1年生の漢字</p>
+        <p id="grade">小学校１年生の漢字</p>
         <div class="kanji_list">
             <button class="kanjis" type="button"></button>
         </div>
@@ -80,17 +85,13 @@
         <p id="kun_yomi"></p>
         <hr>
 
-        <div id="advice">↓<ruby>読<rt>よ</rt></ruby>み<ruby>方<rt>かた</rt></ruby>をひらがなで<ruby>入力<rt>にゅうりょく</rt></ruby>しよう↓</div>
+        <div id="advice">↓[　]の<ruby>漢字<rt>かんじ</rt></ruby>の<ruby>読<rt>よ</rt></ruby>み<ruby>方<rt>かた</rt></ruby>をひらがなで<ruby>入力<rt>にゅうりょく</rt></ruby>しよう↓</div>
         <hr>
             <div class="quiz_clone">
                 <p class="question"></p>
                 <div class="how_to_read_container">
                     <div class="how_to_read_question">
-                        <p class="question_input_A"></p>
-                        <form onsubmit="return false">
-                            <input class="how_to_read" type="text" value="" maxlength="10">
-                        </form>
-                        <p class="question_input_B"></p>
+                        <input class="how_to_read" type="text" value="" maxlength="10">
                         <p class="answer"></p>
                     </div>
                 </div>
@@ -99,10 +100,12 @@
 
             <div id="correct_message"></div>
             <button type="button" id="answerButton"><ruby>答<rt>こた</rt></ruby>え<ruby>合<rt>あ</rt></ruby>わせ</button>
-        <hr>
-        <div id="congratulations">クリア！おめでとう！！</div>
+        
         <% if account_signed_in? %>
-            <div class="btn" id="registerButton"><a href="/kanji_quiz">カードを<ruby>学習記録<rt>がくしゅうきろく</rt></ruby>に<ruby>保存<rt>ほぞん</rt></ruby>する</a></div>
+            <div class="congratulations">おめでとう！カードをほぞんしよう</div>
+            <div class="btn" id="registerButton"><a href="/kanji_quiz/index">カードを<ruby>学習記録<rt>がくしゅうきろく</rt></ruby>に<ruby>保存<rt>ほぞん</rt></ruby>する</a></div>
+        <% else %>
+            <div class="congratulations">おめでとう！！</div>
         <% end %>
     
     <div class="popup" id="js-popup">
@@ -113,6 +116,7 @@
         <div class="black-background" id="js-black-bg"></div>
     </div>
     <p id="pass_message">がんばったね！</p>
+    <p id="char_name"></p>
     
     <% if account_signed_in? %>
         <div id="login_checker">true</div>
@@ -120,7 +124,7 @@
         <div id="login_checker">false</div>
     <% end %>
 
-    <%= javascript_pack_tag 'kanji_quiz'%>
+    <%= javascript_pack_tag 'kanji1'%>
     <%= javascript_pack_tag 'toggle'%>
     </div>
 </div>
