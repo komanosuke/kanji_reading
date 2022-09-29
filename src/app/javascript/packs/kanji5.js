@@ -193,9 +193,9 @@ const quiz = [
 	},
 	{
 		pronunciation:[['キ'],['よろこぶ']],
-		question:[''],
-		kanji:[''],
-		answer:['']
+		question:['喜ぶ'],
+		kanji:['喜'],
+		answer:['よろこ']
 	},
 	{
 		pronunciation:[['ギ'],['わざ']],

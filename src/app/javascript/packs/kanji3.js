@@ -355,9 +355,9 @@ const quiz = [
 	},
 	{
 		pronunciation:[[''],['さら']],
-		question:[''],
-		kanji:[''],
-		answer:['']
+		question:['皿'],
+		kanji:['皿'],
+		answer:['さら']
 	},
 	{
 		pronunciation:[['シ','ジ'],['つかえる']],
@@ -475,15 +475,15 @@ const quiz = [
 	},
 	{
 		pronunciation:[['シュウ'],['す']],
-		question:[''],
-		kanji:[''],
-		answer:['']
+		question:['九州'],
+		kanji:['九州'],
+		answer:['きゅうしゅう']
 	},
 	{
 		pronunciation:[['シュウ','ジュウ'],['ひろう']],
-		question:[''],
-		kanji:[''],
-		answer:['']
+		question:['拾う'],
+		kanji:['拾'],
+		answer:['ひろ']
 	},
 	{
 		pronunciation:[['シュウ'],['おわる','おえる']],
@@ -541,9 +541,9 @@ const quiz = [
 	},
 	{
 		pronunciation:[['ショウ'],['']],
-		question:[''],
-		kanji:[''],
-		answer:['']
+		question:['昭和'],
+		kanji:['昭和'],
+		answer:['しょうわ']
 	},
 	{
 		pronunciation:[['ショウ'],['きえる','けす']],
