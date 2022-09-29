@@ -895,9 +895,9 @@ const quiz = [
 	},
 	{
 		pronunciation:[['ナ'],['']],
-		question:[''],
-		kanji:[''],
-		answer:['']
+		question:['奈良'],
+		kanji:['奈良'],
+		answer:['なら']
 	},
 	{
 		pronunciation:[[''],['なし']],

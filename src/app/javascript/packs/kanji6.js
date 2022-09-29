@@ -901,9 +901,9 @@ const quiz = [
 	},
 	{
 		pronunciation:[['ハイ'],['']],
-		question:[''],
-		kanji:[''],
-		answer:['']
+		question:['肺'],
+		kanji:['肺'],
+		answer:['はい']
 	},
 	{
 		pronunciation:[['ハイ'],['']],
