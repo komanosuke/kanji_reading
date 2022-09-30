@@ -659,10 +659,7 @@ function judge() {
 
 		$('#congratulations').css('visibility','visible');
 		$('#registerButton').css('visibility','visible');
-		let login_checker = document.getElementById('login_checker');
-			if(login_checker.textContent == 'true'){
-				openPopup(kanjiGrade, kanjiNumber);
-			}
+		openPopup(kanjiGrade, kanjiNumber);
 	} else {
 		document.getElementById('correct_message').textContent = '残念！もう一度やってみよう！！';
 	}
