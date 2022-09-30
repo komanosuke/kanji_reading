@@ -42,9 +42,10 @@
     <div id="page_top"><a></a></div>
     <div id="title">漢字 読み方クイズ</div>
     <div class="contents">
-        <h1>いろんな<ruby>漢字<rt>かんじ</rt></ruby>の<ruby>読<rt>よ</rt></ruby>み<ruby>方<rt>かた</rt></ruby>をおぼえよう！</h1>
+        <%= image_tag "card1.jpg", id:"card_image1" %>
+        
         <% if account_signed_in? %>
-            <p><ruby>合格<rt>ごうかく</rt></ruby>したらキャラクターカードがでてくるよ！<br>がんばってあつめよう！</p>
+            <p><ruby>合格<rt>ごうかく</rt></ruby>したらキャラクターカードがでてくるよ！<br>がんばってあつめよう！<br>↓<ruby>漢字<rt>かんじ</rt></ruby>をおしてね↓</p>
         <% else %>
             <p>ログインすると、どの<ruby>漢字<rt>かんじ</rt></ruby>に<ruby>合格<rt>ごうかく</rt></ruby>したかを<br><ruby>保存<rt>ほぞん</rt></ruby>できるよ！</p>
         <% end %>

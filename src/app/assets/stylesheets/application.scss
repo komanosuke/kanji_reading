@@ -33,7 +33,6 @@ body {
     font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
 }
 
-
 header {
     background-color:black;
     padding: 20px;
@@ -44,7 +43,6 @@ header {
     justify-content: space-between;
     z-index: 100;
 }
-
 
 footer {
     background-color: black;
@@ -65,14 +63,11 @@ footer {
     cursor: hand;
 }
 
-
-
 .nav {
     list-style: none;
     display: flex;
     margin: 0;
 }
-
 
 .nav li {
     text-align: center;
@@ -85,7 +80,6 @@ footer {
     cursor: hand;
 }
 
-
 .nav li a {
     display: block;
     text-decoration: none;
@@ -93,7 +87,6 @@ footer {
     font-weight: bold;
     width: 100%;
 }
-
 
 ul {
     list-style: none;
@@ -108,13 +101,9 @@ ul {
     transition:max-height 0.3s linear;
 }
 
-
 .js-btn {
     visibility: hidden;
 }
-
-
-
 
 .btn {
     position: relative;
@@ -123,7 +112,6 @@ ul {
     height: 50px;
     width: 150px;
 }
-
 
 .btn a {
     position: absolute;
@@ -149,7 +137,6 @@ ul {
     border-radius:5px;
 }
 
-
 #manga_box {
     width: 100%;
     text-align: center;
@@ -159,7 +146,6 @@ ul {
     width: 60%;
 }
 
-
 .back {
     width: 90%;
     background-color: rgba(0,0,0,0.8);
@@ -168,7 +154,6 @@ ul {
     text-align: center;
 }
 
-
 #title {
     font-size: 60px;
     text-align: center;
@@ -176,7 +161,6 @@ ul {
     margin: 10px auto 20px;
     padding: 20px 0 20px;
 }
-
 
 #main_title {
     font-size: 80px;
@@ -192,7 +176,6 @@ h1 {
     font-size: 150%;
 }
 
-
 #movie {
     text-align: center;
     margin: 20px auto;
@@ -203,15 +186,11 @@ h1 {
     width: 640px;
 }
 
-
-
-
 .contents {
     width: 100%;
     margin: 20px auto;
     text-align: center;
 }
-
 
 .contents p {
     margin: auto;
@@ -267,17 +246,12 @@ h1 {
     font-weight: bold;
 }
 
-
-
-
 #subjects {
     list-style: none;
     margin: 0;
     padding: 0;
     text-align: center;
 }
-
-
 
 #subjects li {
     text-align: center;
@@ -287,7 +261,6 @@ h1 {
     width: 25%;
     min-width: 160px;
 }
-
 
 #subjects li a {
     display: block;
@@ -300,12 +273,9 @@ h1 {
     width: 100%;
 }
 
-
 #subjects p {
     text-align: center;
 }
-
-
 
 #page_top{
     width: 50px;
@@ -318,7 +288,6 @@ h1 {
     border-radius: 25px;
     z-index: 1;
 }
-
 
 #page_top:hover {
     background-color: gray;
@@ -356,11 +325,9 @@ iframe {
     margin: 20px auto;
 }
 
-
 #question {
     text-align: center;
 }
-
 
 .notyet {
     width: 90%;
@@ -376,7 +343,6 @@ iframe {
     max-height: 150px;
 }
 
-
 .japanese, .japanese_top, .japanese_school, .japanese_kanji {
     background-color:firebrick;
     border-radius:5px;
@@ -384,18 +350,15 @@ iframe {
     cursor: hand;
 }
 
-
 .japanese:hover, .japanese_top a:hover, .japanese_school a:hover, .japanese_kanji:hover {
     background-color:rgb(216, 70, 70);
     border-radius:5px;
 }
 
-
 .math:hover #math_menu {
     background-color: rgb(30, 170, 170);
     max-height: 150px;
 }
-
 
 .math, .math_top, .math_school {
     background-color: teal;
@@ -404,19 +367,15 @@ iframe {
     cursor: hand;
 }
 
-
 .math:hover, .math_top a:hover, .math_school a:hover {
     background-color: rgb(30, 170, 170);
     border-radius:5px;
 }
 
-
-
 .social:hover #social_menu {
     background-color:rgb(255, 205, 80);
     max-height: 150px;
 }
-
 
 .social, .social_top, .social_school {
     background-color:goldenrod;
@@ -425,20 +384,15 @@ iframe {
     cursor: hand;
 }
 
-
 .social:hover, .social_top a:hover, .social_school a:hover {
     background-color:rgb(255, 205, 80);
     border-radius:5px;
 }
 
-
-
-
 .science:hover #science_menu {
     background-color: rgb(70, 179, 70);
     max-height: 150px;
 }
-
 
 .science, .science_top, .science_school {
     background-color: forestgreen;
@@ -447,15 +401,10 @@ iframe {
     cursor: hand;
 }
 
-
 .science:hover, .science_top a:hover, .science_school a:hover {
     background-color: rgb(70, 179, 70);
     border-radius:5px;
 }
-
-
-
-
 
 .english:hover #english_menu {
     background-color: #aea9d7;
@@ -474,8 +423,6 @@ iframe {
     border-radius:5px;
 }
 
-
-
 .btn:hover {
     max-height: 150px;
     background-color:lightgray;
@@ -492,10 +439,6 @@ iframe {
     border-radius:5px;
 }
 
-
-
-
-
 #index {
     background-color: white;
     background-repeat: no-repeat;
@@ -504,9 +447,6 @@ iframe {
     background-attachment: fixed;
     background-size: cover;
 }
-
-
-
 
 .kanjis, .cards {
     border: 0;
@@ -527,7 +467,6 @@ iframe {
 .kanjis:hover, .cards:hover {
     background-color: white;
 }
-
 
 #hidden_block {
     width: auto;
@@ -550,12 +489,10 @@ iframe {
     border-radius: 100px
 }
 
-
-.card_model {
-    width: 50px;
-    border-radius: 25px;
+#card_image1 {
+    width: 150px;
+    border-radius: 75px;
 }
-
 
 hr {
     margin: 50px 0px;
@@ -590,7 +527,6 @@ hr {
     font-size: 130%;
     padding-bottom: 40px;
 }
-
 
 .devise_links a {
     color: lightblue;
@@ -662,7 +598,6 @@ hr {
     text-align: center;
 }
 
-
 #contents_link a {
     position: absolute;
     top: 0;
@@ -681,16 +616,14 @@ hr {
     cursor: hand;
 }
 
-
-
 #login_checker {
     visibility: hidden;
 }
+
 #answerButton {
     cursor: pointer;
     cursor: hand;
 }
-
 
 #pass_message {
     position: fixed;
@@ -744,10 +677,12 @@ hr {
     visibility: hidden;
     transition: .6s;
 }
+
 .popup.is-show {
     opacity: 1;
     visibility: visible;
-  }
+}
+
 .popup-inner {
     position: absolute;
     left: 50%;
@@ -759,9 +694,11 @@ hr {
     background-color: white;
     z-index: 3;
 }
+
 #image_file {
     width: 100%;
 }
+
 .close-btn {
     position: absolute;
     right: 0;
@@ -772,10 +709,12 @@ hr {
     text-align: center;
     cursor: pointer;
 }
+
 .close-btn i {
     font-size: 20px;
     color: #333;
 }
+
 .black-background {
     position: absolute;
     left: 0;
@@ -787,15 +726,10 @@ hr {
     cursor: pointer;
 }
 
-
-
 .dummy_data {
     font-size: 1px;
     display: none;
 }
-
-
-
 
 #js-btn ,#great_button, #registerButton, .congratulations {
     visibility: hidden;
@@ -812,15 +746,9 @@ hr {
 
 }
 
-
-
-
-
 #result {
     visibility: hidden;
 }
-
-
 
 
 
@@ -879,8 +807,6 @@ hr {
     outline: none;
     font-size: 20px;
 }
-
-
 
 .center, .hyakumasu_copy, .hyakuwari_copy {
     width: auto;
@@ -990,8 +916,6 @@ div#btn-box{
 	position: fixed;
 	bottom :0px;
 }
-
-
 
 table, td, th{
     border: 1px solid darkgrey;
@@ -1394,7 +1318,7 @@ table {
     }
 
     header {
-        height: 5%;
+        height: 30px;
     }
 
     #title {
@@ -1427,7 +1351,6 @@ table {
         height: 45px;
     }
 
-
     .nav {
         position: fixed;
         right: -70%;
@@ -1449,16 +1372,19 @@ table {
         align-items: center;
     }
 
-
     .nav li div {
         display: none;
     }
-
 
     .japanese_kanji {
         border-bottom:solid thin rgb(216, 70, 70);
     }
 
+    #card_image1 {
+        width: 150px;
+        border-radius: 75px;
+        position: static;
+    }
 
     .not_yet {
         width: 80%;
@@ -1486,7 +1412,6 @@ table {
         min-width: 70px;
     }
 
-
     #login_btn {
         position: fixed;
         top: 5px;
@@ -1506,7 +1431,6 @@ table {
         margin: auto;
         padding: 90px 0 500px;
     }
-
 
     #table_box {
         width: 80%;
@@ -1546,7 +1470,6 @@ table {
         width: 40px;
         padding: 0;
     }
-
 
     #js-btn {
         visibility: visible;
