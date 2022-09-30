@@ -667,7 +667,12 @@ function chooseCategory(e){
 for(let i = 0; i < Object.keys(quizList).length; i++){
 	document.getElementsByClassName('categoryButton')[i].addEventListener('click', chooseCategory, false);
 	document.getElementsByClassName('categoryButton')[i].addEventListener('click', function() {
-		$('html, body').animate({scrollTop:0},400);
+		let windowSize = window.innerWidth;
+		if (windowSize < 500) {
+			$('html, body').animate({scrollTop:300},400);
+		} else {
+			$('html, body').animate({scrollTop:400},400);
+		}
 	});
 }
 
