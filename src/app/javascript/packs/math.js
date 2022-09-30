@@ -390,7 +390,7 @@ function setCalcNumbers(NumberList1 = ['0','1','2','3','4','5','6','7','8','9'],
 	document.getElementById('amari').style.position = 'absolute';
 	document.getElementById('left').style.position = 'absolute';
 	document.getElementById('amari').style.visibility = 'hidden';
-	document.getElementById('left').style.visibility = 'hidden';
+	document.getElementById('left').style.display = 'none';
 
 	//配列の中身をシャッフル
 	let shuffledNumber1 = NumberList1[Math.floor(Math.random() * NumberList1.length)];
@@ -408,7 +408,7 @@ function setCalcNumbers(NumberList1 = ['0','1','2','3','4','5','6','7','8','9'],
 		document.getElementById('left').style.visibility = 'visible';
 		document.getElementById('amari_container').style.position = 'static';
 		document.getElementById('amari').style.position = 'static';
-		document.getElementById('left').style.position = 'static';
+		document.getElementById('left').style.display = 'inline';
 	}
 }
 
@@ -517,6 +517,14 @@ canvas.addEventListener('mouseup', endPoint, false);
 canvas.addEventListener('touchstart', startPoint, false);
 canvas.addEventListener('touchmove', movePoint, false);
 canvas.addEventListener('touchend', endPoint, false);
+
+canvas.width = 500;
+canvas.height = 500;
+let windowSize = window.innerWidth;
+if (windowSize < 500) {
+	canvas.width = 300;
+	canvas.height = 300;
+}
 
 function startPoint(e){
 	e.preventDefault();
