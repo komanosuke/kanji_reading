@@ -386,11 +386,10 @@ function setDivide(){
 
 //列の数字ランダム設定
 function setCalcNumbers(NumberList1 = ['0','1','2','3','4','5','6','7','8','9'],NumberList2 = ['0','1','2','3','4','5','6','7','8','9']){
-	document.getElementById('amari_container').style.position = 'absolute';
-	document.getElementById('amari').style.position = 'absolute';
-	document.getElementById('left').style.position = 'absolute';
-	document.getElementById('amari').style.visibility = 'hidden';
+	document.getElementById('amari_container').style.position = 'none';
+	document.getElementById('amari').style.display = 'none';
 	document.getElementById('left').style.display = 'none';
+	
 
 	//配列の中身をシャッフル
 	let shuffledNumber1 = NumberList1[Math.floor(Math.random() * NumberList1.length)];
@@ -404,10 +403,8 @@ function setCalcNumbers(NumberList1 = ['0','1','2','3','4','5','6','7','8','9'],
 	$Number2.textContent = shuffledNumber2;
 
 	if(document.getElementById("symbol").textContent == '÷' && shuffledNumber1 % shuffledNumber2 != 0){
-		document.getElementById('amari').style.visibility = 'visible';
-		document.getElementById('left').style.visibility = 'visible';
-		document.getElementById('amari_container').style.position = 'static';
-		document.getElementById('amari').style.position = 'static';
+		document.getElementById('amari_container').style.display = 'inline';
+		document.getElementById('amari').style.display = 'inline';
 		document.getElementById('left').style.display = 'inline';
 	}
 }

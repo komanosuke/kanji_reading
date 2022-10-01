@@ -36,7 +36,7 @@ const quiz = [
 	},
 	{
 		pronunciation:[['オン','イン'],['おと','ね']],
-		question:['足音','本音','音'],
+		question:['足音','本音','音がく'],
 		kanji:['足音','本音','音'],
 		answer:['あしおと','ほんね','おん'],
         char_name:'オンプー'
