@@ -4,7 +4,7 @@
 国語では「漢字の読み」ドリルを、算数では「百ます計算」などを練習できます。<br>
 レスポンシブ対応しています。
 ![screenshot](https://user-images.githubusercontent.com/54266017/193444950-c1a1ae02-ed7a-4fda-915a-f81bae906ca4.png)
-![screenshot_responsive](https://user-images.githubusercontent.com/54266017/193446378-3f2d8fd2-ee80-4bb5-82e2-005c804e4d84.jpg)
+![screenshot_responsive](https://user-images.githubusercontent.com/54266017/193446425-edddbaa0-f148-4188-b6d2-9f651f9e4afb.jpg)
 
 
 # URL
