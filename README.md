@@ -2,9 +2,9 @@
 
 学習に抵抗感のある児童向けの基礎学習のサイトです。<br>
 国語では「漢字の読み」ドリルを、算数では「百ます計算」などを練習できます。<br>
-レスポンシブ対応しています。<br>
-https://user-images.githubusercontent.com/54266017/193444950-c1a1ae02-ed7a-4fda-915a-f81bae906ca4.png<br>
-https://user-images.githubusercontent.com/54266017/193444984-d81b0586-18e5-4ca1-8b17-59f99fe00aa7.png
+レスポンシブ対応しています。
+<img width="1400"　src="https://user-images.githubusercontent.com/54266017/193444950-c1a1ae02-ed7a-4fda-915a-f81bae906ca4.png">
+<img width="350"　src= "https://user-images.githubusercontent.com/54266017/193444984-d81b0586-18e5-4ca1-8b17-59f99fe00aa7.png">
 
 
 # URL
