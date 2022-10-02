@@ -699,6 +699,13 @@ hr {
     width: 100%;
 }
 
+.intro {
+    width: 50%;
+    margin: 5px auto;
+    border: 2px solid darkgray;
+    border-radius: 5px;
+}
+
 .close-btn {
     position: absolute;
     right: 0;
@@ -1384,6 +1391,10 @@ table {
         width: 150px;
         border-radius: 75px;
         position: static;
+    }
+
+    .intro {
+        width: 70%;
     }
 
     .not_yet {
