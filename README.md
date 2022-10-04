@@ -26,4 +26,5 @@ https://kanji-reading.herokuapp.com<br>
 
 # 機能一覧
 - ユーザー登録、ログイン機能(devise)
+
 - 学習記録保存機能(Ajax)

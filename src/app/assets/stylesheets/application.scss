@@ -889,12 +889,12 @@ hr {
 }
 
 #amari_container, #amari, #left {
-    visibility: hidden;
-    position: absolute;
+    display: none;
 }
 
 #amari {
     width: 50px;
+    line-height: 36px;
 }
 
 .calc_texts {
@@ -1624,6 +1624,7 @@ table {
     #amari {
         width: 40px;
         font-size: 13px;
+        line-height: 25px;
     }
 
     .calc_texts {
